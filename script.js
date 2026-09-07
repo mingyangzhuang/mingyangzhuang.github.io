@@ -90,6 +90,29 @@
     }
   }
 
+  /* ---------- Nav: mobile menu toggle ---------- */
+  var navToggle = document.querySelector('.nav-toggle');
+  var navLinksEl = document.getElementById('nav-links');
+  if (navToggle && navLinksEl) {
+    var closeMenu = function () {
+      navLinksEl.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    };
+    navToggle.addEventListener('click', function () {
+      var isOpen = navLinksEl.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navLinksEl.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 700) closeMenu();
+    });
+  }
+
   /* ---------- Nav: solid background once you scroll past the hero ---------- */
   var nav = document.querySelector('.site-nav');
   var heroEl = document.querySelector('header.hero');
