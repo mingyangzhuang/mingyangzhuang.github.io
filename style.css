@@ -1,0 +1,401 @@
+/* ============================================================
+   Mingyang Zhuang — academic homepage
+   Illinois Black Holes / University of Illinois Urbana-Champaign
+   ============================================================ */
+
+:root {
+  --bg: #faf8f5;
+  --bg-alt: #f2ede6;
+  --text: #201d1a;
+  --text-soft: #57524c;
+  --border: #e3dcd2;
+  --accent: #b5511a;      /* accretion-disk amber-orange */
+  --accent-soft: #f1e2d4;
+  --link: #8a3c12;
+  --card-shadow: 0 1px 2px rgba(32, 29, 26, 0.04), 0 4px 16px rgba(32, 29, 26, 0.05);
+  --radius: 10px;
+  --max-width: 780px;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14120f;
+    --bg-alt: #1b1815;
+    --text: #ece8e2;
+    --text-soft: #b3aca2;
+    --border: #322c25;
+    --accent: #e08a4f;
+    --accent-soft: #2b2018;
+    --link: #f0a468;
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+a:hover { border-bottom-color: var(--link); }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Nav ---------- */
+
+nav.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+nav.site-nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+  border-bottom: none;
+  white-space: nowrap;
+}
+.brand:hover { border-bottom: none; color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  font-size: 0.92rem;
+}
+.nav-links a {
+  color: var(--text-soft);
+  border-bottom: none;
+}
+.nav-links a:hover { color: var(--accent); }
+
+/* ---------- Hero ---------- */
+
+header.hero {
+  padding: 64px 0 40px;
+}
+
+.hero-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--accent) 0%, #7a2f0a 100%);
+  color: #fdf6ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: 600;
+  box-shadow: var(--card-shadow);
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  margin: 0 0 6px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.hero-text .title {
+  color: var(--text-soft);
+  font-size: 1.02rem;
+  margin: 0 0 2px;
+}
+
+.hero-text .affil {
+  color: var(--text-soft);
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+.hero-tagline {
+  margin-top: 22px;
+  font-size: 1.08rem;
+  color: var(--text);
+  max-width: 62ch;
+}
+
+.hero-links {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.pill.primary {
+  background: var(--accent);
+  color: #fdf6ee;
+  border-color: var(--accent);
+}
+.pill.primary:hover { border-color: var(--accent); color: #fdf6ee; opacity: 0.92; }
+
+/* ---------- Sections ---------- */
+
+section {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+}
+
+section h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+
+section > .wrap > p.section-intro {
+  color: var(--text-soft);
+  margin-top: -8px;
+  margin-bottom: 22px;
+  max-width: 62ch;
+}
+
+/* ---------- Research topic cards ---------- */
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.topic-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.topic-card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.topic-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+
+/* ---------- Publications ---------- */
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pub-item {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 14px;
+}
+
+.pub-year {
+  font-family: var(--serif);
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  padding-top: 2px;
+}
+
+.pub-title {
+  font-weight: 600;
+  margin: 0 0 3px;
+}
+
+.pub-authors {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  margin: 0 0 5px;
+}
+.pub-authors .me { color: var(--text); font-weight: 600; }
+
+.pub-venue {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  font-style: italic;
+  margin: 0 0 6px;
+}
+
+.pub-links a {
+  font-size: 0.86rem;
+  margin-right: 12px;
+}
+
+.pub-more {
+  margin-top: 22px;
+  font-size: 0.94rem;
+}
+
+/* ---------- CV ---------- */
+
+.cv-block {
+  margin-bottom: 22px;
+}
+.cv-block h3 {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+.cv-entry {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+.cv-entry .when {
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  padding-top: 1px;
+}
+.cv-entry .what strong { font-weight: 600; }
+.cv-entry .what span.where { color: var(--text-soft); }
+
+/* ---------- News ---------- */
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.news-list li {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+.news-date {
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  padding-top: 1px;
+  white-space: nowrap;
+}
+
+/* ---------- Projects ---------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--card-shadow);
+}
+.project-card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+.project-card p {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+.project-card a { font-size: 0.86rem; }
+
+/* ---------- Contact / Footer ---------- */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 8px;
+}
+
+footer {
+  padding: 32px 0 60px;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+
+/* ---------- Editable-content marker ---------- */
+
+.edit-flag {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 0.72rem;
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+  background: var(--accent-soft);
+  border-radius: 5px;
+  padding: 1px 6px;
+  vertical-align: middle;
+  border-bottom: none;
+}
+
+@media (max-width: 560px) {
+  .hero-row { flex-direction: column; align-items: flex-start; }
+  .cv-entry, .news-list li { grid-template-columns: 1fr; gap: 2px; }
+  .pub-item { grid-template-columns: 1fr; }
+  .pub-year { padding-top: 0; }
+}
