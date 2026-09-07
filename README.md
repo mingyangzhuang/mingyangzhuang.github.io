@@ -8,14 +8,14 @@ Live at: **https://mingyangzhuang.github.io**
 
 - `index.html` — the whole site (single page: About, Research, Publications, CV, Projects & News, Contact)
 - `style.css` — styling, including automatic light/dark mode
-- `assets/` — put your photo (`photo.jpg`) and CV (`cv.pdf`) here
+- `assets/cv.pdf` — CV, linked from the "Download CV" button
+- `assets/` — also put your photo here as `photo.jpg` if you want a real headshot instead of the initials avatar
 
 No build step, no dependencies — it's plain HTML/CSS. Just edit and push.
 
 ## First-time setup (do this once)
 
-This repo was created empty. From your own machine (with your GitHub login/SSH key set up),
-in the folder these files are in:
+From your own machine (with your GitHub login/SSH key set up), in the folder these files are in:
 
 ```bash
 git init
@@ -25,6 +25,8 @@ git branch -M main
 git remote add origin https://github.com/mingyangzhuang/mingyangzhuang.github.io.git
 git push -u origin main
 ```
+
+(If this is already done and you just have new local commits to publish, skip straight to `git push`.)
 
 Then go to the repo's **Settings → Pages** on GitHub. For a repo named `<username>.github.io`,
 Pages is usually enabled automatically from the `main` branch; if not, set the source to
@@ -41,22 +43,14 @@ git push
 
 GitHub Pages rebuilds automatically a few seconds after each push.
 
-## Customize the content
+## Remaining optional touches
 
-Everything that still needs your real info is marked with an `edit me` tag in `index.html`
-(search the file for `edit me` or `EDIT ME`). At minimum:
-
-- [ ] Confirm your name/title in the `<header class="hero">` section
-- [ ] Write your real bio/tagline
-- [ ] Add a real photo at `assets/photo.jpg`, then swap the placeholder avatar `<div>` for
-      `<img class="avatar" src="assets/photo.jpg" alt="Mingyang Zhuang">`
-- [ ] Add your real CV as `assets/cv.pdf` (the "Download CV" button already links to it)
-- [ ] Fill in your real Google Scholar / ADS / arXiv profile links in the hero links
-- [ ] Replace the Research section with your actual research areas
-- [ ] Replace the three placeholder publications with your real papers
-- [ ] Fill in the CV section (education, positions, awards, skills)
-- [ ] Replace the News and Projects placeholders with real updates
-- [ ] Update the year range in Education/Positions once known
+- [ ] Add a real photo at `assets/photo.jpg` and swap the placeholder avatar `<div>` in `index.html`
+      for `<img class="avatar" src="assets/photo.jpg" alt="Ming-Yang Zhuang">`
+- [ ] Keep `assets/cv.pdf` up to date as your CV changes
+- [ ] Add more publications / update the "Selected Publications" list as new papers come out
+      (the full list stays available via the ADS library link)
+- [ ] Add real News/Projects updates over time
 
 ## Local preview
 
