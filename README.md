@@ -8,8 +8,7 @@ Live at: **https://mingyangzhuang.github.io**
 
 - `index.html` — the whole site (single page: About, Research, Publications, CV, Projects & News, Contact)
 - `style.css` — styling, including automatic light/dark mode
-- `assets/cv.pdf` — CV, linked from the "Download CV" button
-- `assets/` — also put your photo here as `photo.jpg` if you want a real headshot instead of the initials avatar
+- `assets/` — put your photo here as `photo.jpg` if you want a real headshot instead of the initials avatar
 
 No build step, no dependencies — it's plain HTML/CSS. Just edit and push.
 
@@ -47,7 +46,6 @@ GitHub Pages rebuilds automatically a few seconds after each push.
 
 - [ ] Add a real photo at `assets/photo.jpg` and swap the placeholder avatar `<div>` in `index.html`
       for `<img class="avatar" src="assets/photo.jpg" alt="Ming-Yang Zhuang">`
-- [ ] Keep `assets/cv.pdf` up to date as your CV changes
 - [ ] Add more publications / update the "Selected Publications" list as new papers come out
       (the full list stays available via the ADS library link)
 - [ ] Add real News/Projects updates over time
