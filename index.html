@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e0c0a">
   <title>Ming-Yang Zhuang</title>
   <meta name="description" content="Ming-Yang Zhuang — Postdoctoral Research Associate, Department of Astronomy, University of Illinois Urbana-Champaign. Supermassive black holes, galaxy evolution, AGN feedback and dusty tori, high-z transients.">
 
@@ -28,10 +29,18 @@
   </nav>
 
   <header class="hero" id="top">
-    <div class="wrap">
+    <canvas id="starfield" aria-hidden="true"></canvas>
+    <div class="hero-glow g1" aria-hidden="true"></div>
+    <div class="hero-glow g2" aria-hidden="true"></div>
+
+    <div class="hero-inner wrap">
+      <span class="eyebrow">Astrophysics &middot; UIUC</span>
+
       <div class="hero-row">
         <!-- To use a real photo instead: <img class="avatar" src="assets/photo.jpg" alt="Ming-Yang Zhuang"> -->
-        <div class="avatar">MZ</div>
+        <div class="avatar-wrap">
+          <div class="avatar">MZ</div>
+        </div>
         <div class="hero-text">
           <h1>Ming-Yang Zhuang</h1>
           <p class="title">Postdoctoral Research Associate</p>
@@ -52,9 +61,13 @@
         <a class="pill" href="https://ui.adsabs.harvard.edu/user/libraries/7eLaCipeRIuYIkoZK0YHaA">ADS Library</a>
       </div>
     </div>
+
+    <a class="scroll-cue" href="#research" aria-label="Scroll to Research">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15"/><path d="M6 13l6 6 6-6"/></svg>
+    </a>
   </header>
 
-  <section id="research">
+  <section id="research" class="reveal">
     <div class="wrap">
       <h2>Research</h2>
       <p class="section-intro">
@@ -65,22 +78,27 @@
 
       <div class="topic-grid">
         <div class="topic-card">
+          <span class="topic-num" aria-hidden="true">01</span>
           <h3>SMBH &ndash; galaxy coevolution</h3>
           <p>How black holes and their host galaxies grow together, from local ellipticals to quasars at cosmic noon.</p>
         </div>
         <div class="topic-card">
+          <span class="topic-num" aria-hidden="true">02</span>
           <h3>Galaxy formation &amp; evolution</h3>
           <p>The assembly and evolution of galaxies from the early universe to today, using deep imaging and spectroscopy.</p>
         </div>
         <div class="topic-card">
+          <span class="topic-num" aria-hidden="true">03</span>
           <h3>High-z transients &amp; supernovae</h3>
           <p>Time-domain discoveries of distant supernovae and transients, including with the NEXUS JWST survey.</p>
         </div>
         <div class="topic-card">
+          <span class="topic-num" aria-hidden="true">04</span>
           <h3>AGN outflows &amp; feedback</h3>
           <p>How energy and gas ejected by active galactic nuclei shape star formation in their host galaxies.</p>
         </div>
         <div class="topic-card">
+          <span class="topic-num" aria-hidden="true">05</span>
           <h3>AGN dusty torus</h3>
           <p>The structure, geometry, and infrared signatures of the obscuring torus around accreting supermassive black holes.</p>
         </div>
@@ -88,7 +106,7 @@
     </div>
   </section>
 
-  <section id="publications">
+  <section id="publications" class="reveal">
     <div class="wrap">
       <h2>Publications</h2>
       <p class="section-intro">
@@ -150,7 +168,7 @@
           <div>
             <p class="pub-title">Evolutionary paths of active galactic nuclei and their host galaxies</p>
             <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. C. Ho</p>
-            <p class="pub-venue">Nature Astronomy, 7, 1376</p>
+            <p class="pub-venue"><span class="venue-badge">Featured</span> Nature Astronomy, 7, 1376</p>
           </div>
         </div>
 
@@ -168,7 +186,7 @@
     </div>
   </section>
 
-  <section id="cv">
+  <section id="cv" class="reveal">
     <div class="wrap">
       <h2>CV</h2>
       <p class="section-intro">
@@ -177,107 +195,119 @@
 
       <div class="cv-block">
         <h3>Education</h3>
-        <div class="cv-entry">
-          <div class="when">2016 &ndash; 2022</div>
-          <div class="what"><strong>Ph.D., Astrophysics</strong> — <span class="where">Peking University, Beijing, China (advisor: Luis C. Ho)</span></div>
+        <div class="cv-timeline">
+          <div class="cv-entry">
+            <div class="when">2016 &ndash; 2022</div>
+            <div class="what"><strong>Ph.D., Astrophysics</strong> — <span class="where">Peking University, Beijing, China (advisor: Luis C. Ho)</span></div>
+          </div>
         </div>
       </div>
 
       <div class="cv-block">
         <h3>Positions</h3>
-        <div class="cv-entry">
-          <div class="when">2022 &ndash; present</div>
-          <div class="what"><strong>Postdoctoral Research Scholar</strong> — <span class="where">University of Illinois Urbana-Champaign (advisor: Yue Shen)</span></div>
+        <div class="cv-timeline">
+          <div class="cv-entry">
+            <div class="when">2022 &ndash; present</div>
+            <div class="what"><strong>Postdoctoral Research Scholar</strong> — <span class="where">University of Illinois Urbana-Champaign (advisor: Yue Shen)</span></div>
+          </div>
         </div>
       </div>
 
       <div class="cv-block">
         <h3>Mentoring</h3>
-        <div class="cv-entry">
-          <div class="when">2024 &ndash; present</div>
-          <div class="what">Graduate student <strong>Liam Nolan</strong> (co-mentored with Xin Liu) — <span class="where">DoA, UIUC</span></div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2022 &ndash; 2024</div>
-          <div class="what">Graduate students <strong>Wen Sun</strong> and <strong>Changhao Chen</strong> (co-mentored with Luis C. Ho) — <span class="where">KIAA, Peking University</span></div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2020 &ndash; 2022</div>
-          <div class="what">Undergraduate student <strong>Zihao Wu</strong> (co-mentored with Luis C. Ho; now at CfA/Harvard) — <span class="where">DoA, Peking University</span></div>
+        <div class="cv-timeline">
+          <div class="cv-entry">
+            <div class="when">2024 &ndash; present</div>
+            <div class="what">Graduate student <strong>Liam Nolan</strong> (co-mentored with Xin Liu) — <span class="where">DoA, UIUC</span></div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2022 &ndash; 2024</div>
+            <div class="what">Graduate students <strong>Wen Sun</strong> and <strong>Changhao Chen</strong> (co-mentored with Luis C. Ho) — <span class="where">KIAA, Peking University</span></div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2020 &ndash; 2022</div>
+            <div class="what">Undergraduate student <strong>Zihao Wu</strong> (co-mentored with Luis C. Ho; now at CfA/Harvard) — <span class="where">DoA, Peking University</span></div>
+          </div>
         </div>
       </div>
 
       <div class="cv-block">
         <h3>Grants &amp; Proposals (PI / Co-PI)</h3>
-        <div class="cv-entry">
-          <div class="when">2025</div>
-          <div class="what"><strong>JWST Cycle 4 (GO 7893; PI)</strong> — <span class="where">Host Galaxy Properties of the Most Massive Quasars at Cosmic Noon</span></div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2024</div>
-          <div class="what"><strong>JWST Cycle 3 (GO 5105; Co-PI)</strong> — <span class="where">NEXUS: the North Ecliptic Pole EXtragalactic Unified Survey</span></div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2024</div>
-          <div class="what"><strong>JWST Cycle 2 (DD 6595; PI)</strong> — <span class="where">Giant in the Infant Universe: a Record-breaking Strongly-lensed Massive Quiescent Galaxy</span></div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2023</div>
-          <div class="what"><strong>JWST Cycle 2 (GO 3038; PI)</strong> — <span class="where">An Archival Study of AGN Host Galaxies with JWST NIRCam Imaging</span></div>
+        <div class="cv-timeline">
+          <div class="cv-entry">
+            <div class="when">2025</div>
+            <div class="what"><strong>JWST Cycle 4 (GO 7893; PI)</strong> — <span class="where">Host Galaxy Properties of the Most Massive Quasars at Cosmic Noon</span></div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2024</div>
+            <div class="what"><strong>JWST Cycle 3 (GO 5105; Co-PI)</strong> — <span class="where">NEXUS: the North Ecliptic Pole EXtragalactic Unified Survey</span></div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2024</div>
+            <div class="what"><strong>JWST Cycle 2 (DD 6595; PI)</strong> — <span class="where">Giant in the Infant Universe: a Record-breaking Strongly-lensed Massive Quiescent Galaxy</span></div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2023</div>
+            <div class="what"><strong>JWST Cycle 2 (GO 3038; PI)</strong> — <span class="where">An Archival Study of AGN Host Galaxies with JWST NIRCam Imaging</span></div>
+          </div>
         </div>
       </div>
 
       <div class="cv-block">
         <h3>Selected Invited Talks</h3>
-        <div class="cv-entry">
-          <div class="when">2024</div>
-          <div class="what">&ldquo;NEXUS: the North Ecliptic Pole EXtragalactic Unified Survey&rdquo; — <span class="where">The Ecosystem of Gas and Dust in Galaxies Near and Far, Chiang Mai, Thailand</span></div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2021</div>
-          <div class="what">&ldquo;2D Imaging Analysis&rdquo; — <span class="where">CSST Sky Survey Image Analysis Forum, Chongqing, China</span></div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2020</div>
-          <div class="what">&ldquo;The Interplay Between Star Formation and Black Hole Accretion in Nearby Active Galaxies&rdquo; — <span class="where">Supermassive Black Hole Academic Forum, Lijiang, China</span></div>
+        <div class="cv-timeline">
+          <div class="cv-entry">
+            <div class="when">2024</div>
+            <div class="what">&ldquo;NEXUS: the North Ecliptic Pole EXtragalactic Unified Survey&rdquo; — <span class="where">The Ecosystem of Gas and Dust in Galaxies Near and Far, Chiang Mai, Thailand</span></div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2021</div>
+            <div class="what">&ldquo;2D Imaging Analysis&rdquo; — <span class="where">CSST Sky Survey Image Analysis Forum, Chongqing, China</span></div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2020</div>
+            <div class="what">&ldquo;The Interplay Between Star Formation and Black Hole Accretion in Nearby Active Galaxies&rdquo; — <span class="where">Supermassive Black Hole Academic Forum, Lijiang, China</span></div>
+          </div>
         </div>
       </div>
 
       <div class="cv-block">
         <h3>Teaching &amp; Service</h3>
-        <div class="cv-entry">
-          <div class="when">2026</div>
-          <div class="what">NASA ADAP25 review panelist</div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2025</div>
-          <div class="what">JWST summer school lecturer — <span class="where">Westlake University</span></div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2024</div>
-          <div class="what">JWST Cycle 4 Executive Committee external reviewer</div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2023 &ndash; present</div>
-          <div class="what">JCMT proposal reviewer</div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2023</div>
-          <div class="what">JWST Cycle 3 discussion panelist (SMBH2)</div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2022 &ndash; 2023</div>
-          <div class="what">CSST summer school lecturer — <span class="where">Peking University</span></div>
-        </div>
-        <div class="cv-entry">
-          <div class="when">2020 &ndash; present</div>
-          <div class="what">AAS journal reviewer</div>
+        <div class="cv-timeline">
+          <div class="cv-entry">
+            <div class="when">2026</div>
+            <div class="what">NASA ADAP25 review panelist</div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2025</div>
+            <div class="what">JWST summer school lecturer — <span class="where">Westlake University</span></div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2024</div>
+            <div class="what">JWST Cycle 4 Executive Committee external reviewer</div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2023 &ndash; present</div>
+            <div class="what">JCMT proposal reviewer</div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2023</div>
+            <div class="what">JWST Cycle 3 discussion panelist (SMBH2)</div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2022 &ndash; 2023</div>
+            <div class="what">CSST summer school lecturer — <span class="where">Peking University</span></div>
+          </div>
+          <div class="cv-entry">
+            <div class="when">2020 &ndash; present</div>
+            <div class="what">AAS journal reviewer</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects-news">
+  <section id="projects-news" class="reveal">
     <div class="wrap">
       <h2>Projects &amp; News</h2>
 
@@ -313,7 +343,7 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="reveal">
     <div class="wrap">
       <h2>Contact</h2>
       <p class="section-intro">
@@ -328,12 +358,15 @@
 
   <footer>
     <div class="wrap">
-      &copy; <span id="year"></span> Ming-Yang Zhuang. Built with GitHub Pages.
+      <span>&copy; <span id="year"></span> Ming-Yang Zhuang. Built with GitHub Pages.</span>
+      <a class="to-top" href="#top">Back to top &uarr;</a>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
