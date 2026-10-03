@@ -114,56 +114,236 @@
     <div class="wrap">
       <h2>Publications</h2>
       <p class="section-intro">
-        Selected first-author papers, newest first. I've published 15 first-author papers, 5 (co-)mentored
-        papers, and ~30 contributed papers in total &mdash; see the full, up-to-date list on ADS.
+        I've published <span id="n-first">16</span> first-author papers, 5 (co-)mentored papers, and ~30
+        contributed papers in total. Below are a few highlights, followed by all first-author papers;
+        the full, up-to-date list is on ADS.
       </p>
 
+      <h3 class="pub-subhead">Research Highlights</h3>
+      <div class="hl-list">
+        <article class="hl-card" id="hl-at2026abck">
+          <p class="hl-meta">2026 &middot; arXiv:2609.38373</p>
+          <h4 class="hl-title">NEXUS: Discovery of a Luminous Young Transient at <i>z</i> = 5</h4>
+          <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, Y. Shen, L. Hu, et al.</p>
+          <div class="hl-figs">
+            <figure>
+              <a href="assets/highlights/abck_discovery.webp" target="_blank" rel="noopener"><img src="assets/highlights/abck_discovery.webp" alt="NIRCam reference, science and difference images of AT 2026abck in four filters" loading="lazy" width="1118" height="1400"></a>
+              <figcaption>NIRCam reference, science and difference images: AT&nbsp;2026abck appears on 2026&nbsp;Aug&nbsp;7, after a non-detection two months earlier.</figcaption>
+            </figure>
+            <figure>
+              <a href="assets/highlights/abck_sed.webp" target="_blank" rel="noopener"><img src="assets/highlights/abck_sed.webp" alt="Blackbody fit to the discovery-epoch SED of AT 2026abck" loading="lazy" width="1400" height="870"></a>
+              <figcaption>A blackbody fit to the discovery-epoch photometry: a hot (~17,000&nbsp;K), UV-bright photosphere.</figcaption>
+            </figure>
+          </div>
+          <p class="hl-summary">
+            We report AT&nbsp;2026abck, a transient in a star-forming galaxy at <i>z</i>&nbsp;=&nbsp;5.017 found in NEXUS Year-2 NIRCam
+            imaging &mdash; the first robustly detected <i>z</i>&nbsp;&gt;&nbsp;5 transient in a field without gravitational lensing.
+            It brightened by more than 1.4&nbsp;mag within ~12 rest-frame days, and its spectrum is consistent with a hot
+            (~1.7&times;10<sup>4</sup>&nbsp;K) blackbody with a radius of ~46&nbsp;au and a luminosity of ~3&times;10<sup>43</sup>&nbsp;erg&nbsp;s<sup>&minus;1</sup>.
+            Its offset from the galaxy center and its hot, UV-bright spectrum point to a core-collapse supernova caught only
+            ~4&ndash;10 rest-frame days after explosion, hotter and more luminous than normal Type&nbsp;II supernovae at that phase.
+            The host is a typical star-forming galaxy (<i>M</i><sub>*</sub>&nbsp;&asymp;&nbsp;10<sup>9.8</sup>&nbsp;M<sub>&odot;</sub>), ~2000 times
+            more massive than the host of the lensed SN&nbsp;Eos at <i>z</i>&nbsp;=&nbsp;5.13, showing that supernovae at <i>z</i>&nbsp;&gt;&nbsp;5
+            occur in a wide range of environments and that fast-cadence JWST blank-field surveys can catch them early.
+          </p>
+          <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260938373Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2609.38373">arXiv</a></div>
+        </article>
+
+        <article class="hl-card" id="hl-nexus-transients">
+          <p class="hl-meta">2026 &middot; arXiv:2609.06985</p>
+          <h4 class="hl-title">NEXUS: Transient Searches and First Results from Year One Observations</h4>
+          <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. Hu, J. D. R. Pierel, et al.</p>
+          <div class="hl-figs">
+            <figure>
+              <a href="assets/highlights/y1_footprint.webp" target="_blank" rel="noopener"><img src="assets/highlights/y1_footprint.webp" alt="NEXUS transient-search footprint with Year-1 transients marked" loading="lazy" width="1400" height="1249"></a>
+              <figcaption>The NEXUS-Deep transient-search footprint over six epochs, with the Year-1 transients circled.</figcaption>
+            </figure>
+            <figure>
+              <a href="assets/highlights/y1_mag_z.webp" target="_blank" rel="noopener"><img src="assets/highlights/y1_mag_z.webp" alt="Peak magnitude versus redshift for JWST supernova surveys" loading="lazy" width="1324" height="1313"></a>
+              <figcaption>Peak magnitude versus redshift of supernovae from the NEXUS, JADES and COSMOS transient surveys.</figcaption>
+            </figure>
+          </div>
+          <p class="hl-summary">
+            We present the transient search in NEXUS, a multi-cycle JWST Treasury program in the North Ecliptic Pole field, using
+            NIRCam F200W+F444W imaging taken every ~2 months over ~61.5&nbsp;arcmin<sup>2</sup>, plus NIRSpec/PRISM spectroscopy.
+            In the first year we found 68 robust transients, with host photometric redshifts reaching <i>z</i>&nbsp;&asymp;&nbsp;6, and secured
+            spectroscopic redshifts for 37 of them (~54%), including a tentative host association at <i>z</i>&nbsp;=&nbsp;6.151.
+            NEXUS finds supernovae most efficiently of all JWST surveys so far, at 6.6 per hour of imaging (2.6&times; COSMOS and 26&times; JADES),
+            while its supernova rates broadly agree with other programs. We describe the reduction and detection pipeline in detail
+            and release <a href="https://github.com/mingyangzhuang/jwst_psfmc">jwst_psfmc</a>, a PSF photometry package that accounts
+            for the correlated noise between pixels introduced by drizzling.
+          </p>
+          <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260906985Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2609.06985">arXiv</a> <a href="https://github.com/mingyangzhuang/jwst_psfmc">Code</a></div>
+        </article>
+
+        <article class="hl-card" id="hl-nexus-lrds">
+          <p class="hl-meta">2026 &middot; ApJ, 999, 31</p>
+          <h4 class="hl-title">NEXUS: A Spectroscopic Census of Broad-line AGNs and Little Red Dots at 3 &lesssim; <i>z</i> &lesssim; 6</h4>
+          <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, J. Li, Y. Shen, et al.</p>
+          <div class="hl-figs">
+            <figure>
+              <a href="assets/highlights/lrd_stamps.webp" target="_blank" rel="noopener"><img src="assets/highlights/lrd_stamps.webp" alt="Color image stamps of NEXUS broad-line AGNs and Little Red Dots" loading="lazy" width="1400" height="930"></a>
+              <figcaption>Color (F090W+F200W+F444W) images of the broad-line AGNs found with NIRCam grism spectroscopy; Little Red Dots are labeled &ldquo;LRD&rdquo;.</figcaption>
+            </figure>
+            <figure>
+              <a href="assets/highlights/lrd_density.webp" target="_blank" rel="noopener"><img src="assets/highlights/lrd_density.webp" alt="Number density of broad-line AGNs and LRDs versus redshift" loading="lazy" width="1400" height="1028"></a>
+              <figcaption>Number density of broad-line AGNs and LRDs versus redshift, compared with other surveys.</figcaption>
+            </figure>
+          </div>
+          <p class="hl-summary">
+            Using NIRCam grism (WFSS) spectroscopy of the central 100&nbsp;arcmin<sup>2</sup> of NEXUS, we identify 23 broad-line AGNs at
+            3&nbsp;&lesssim;&nbsp;<i>z</i>&nbsp;&lesssim;&nbsp;6, 15 of which are &ldquo;Little Red Dots&rdquo; (LRDs). LRDs have a number density of
+            ~10<sup>&minus;5</sup>&nbsp;cMpc<sup>&minus;3</sup>, which hints at a decline toward the lower end of this redshift range, and
+            black-hole masses of ~10<sup>6.3&ndash;8.4</sup>&nbsp;M<sub>&odot;</sub>. Half of the LRDs show strong Balmer absorption, a sign of dense
+            gas around the broad-line region. In most LRDs we detect extended host-galaxy light (hundreds of parsecs across)
+            that contributes much, or even most, of the UV emission, largely explaining the puzzling UV upturn in LRD spectra.
+            Their small-scale clustering suggests LRDs may be more strongly clustered than their low space density would imply.
+          </p>
+          <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2026ApJ...999...31Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2505.20393">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/ae3612">Journal</a></div>
+        </article>
+
+        <article class="hl-card" id="hl-cosmosweb">
+          <p class="hl-meta">2024 &middot; ApJ, 962, 93</p>
+          <h4 class="hl-title">Active Galactic Nuclei and Host Galaxies in COSMOS-Web. I. NIRCam Images, PSF Models and Initial Results on X-Ray-selected Broad-line AGNs at 0.35 &lesssim; <i>z</i> &lesssim; 3.5</h4>
+          <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, J. Li, Y. Shen</p>
+          <div class="hl-figs">
+            <figure>
+              <a href="assets/highlights/cosmosweb_residuals.webp" target="_blank" rel="noopener"><img src="assets/highlights/cosmosweb_residuals.webp" alt="Gallery of F277W residual images of AGN host galaxies" loading="lazy" width="1400" height="1392"></a>
+              <figcaption>F277W images left over after subtracting the AGN and smooth host models reveal bars, spiral arms and tidal features. Click to enlarge.</figcaption>
+            </figure>
+            <figure>
+              <a href="assets/highlights/cosmosweb_mbh_mstar.webp" target="_blank" rel="noopener"><img src="assets/highlights/cosmosweb_mbh_mstar.webp" alt="Black hole mass versus stellar mass for AGNs at 1 to 2.5" loading="lazy" width="1400" height="1352"></a>
+              <figcaption>Black-hole mass versus host stellar mass for AGNs at 1&nbsp;&le;&nbsp;<i>z</i>&nbsp;&le;&nbsp;2.5 (red), compared with nearby AGNs (gray).</figcaption>
+            </figure>
+          </div>
+          <p class="hl-summary">
+            We reduced all public COSMOS-Web NIRCam imaging available by mid-2023 (0.28&nbsp;deg<sup>2</sup>) and built PSF models for it, finding
+            that the NIRCam PSF changes noticeably over short times and varies randomly across the field. Combining NIRCam with
+            archival HST imaging, we separate the central point source from the host galaxy for 143 X-ray-selected broad-line
+            AGNs at 0.35&nbsp;&lesssim;&nbsp;<i>z</i>&nbsp;&lesssim;&nbsp;3.5, detecting host starlight in 142. About two-thirds of the hosts are
+            star-forming, showing no sign that the AGN is shutting down star formation at the time we observe it, and the hosts follow nearly the same mass&ndash;size relation as
+            galaxies without an AGN. Major mergers are rare (~7&ndash;22%), but bars, spiral arms and signs of minor mergers are everywhere,
+            pointing to secular processes and minor mergers as important triggers of AGN activity.
+          </p>
+          <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...962...93Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2309.03266">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/ad1517">Journal</a></div>
+        </article>
+
+        <article class="hl-card" id="hl-natas">
+          <p class="hl-meta">2023 &middot; Nature Astronomy, 7, 1376</p>
+          <h4 class="hl-title">Evolutionary paths of active galactic nuclei and their host galaxies</h4>
+          <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. C. Ho</p>
+          <div class="hl-figs">
+            <figure>
+              <a href="assets/highlights/natas_mbh_mstar.webp" target="_blank" rel="noopener"><img src="assets/highlights/natas_mbh_mstar.webp" alt="Black hole mass versus stellar mass for early- and late-type AGN hosts" loading="lazy" width="1381" height="1366"></a>
+              <figcaption>The black-hole mass&ndash;stellar mass relation of early-type (magenta) and late-type (green) AGN hosts at <i>z</i>&nbsp;&le;&nbsp;0.35.</figcaption>
+            </figure>
+            <figure>
+              <a href="assets/highlights/natas_paths.webp" target="_blank" rel="noopener"><img src="assets/highlights/natas_paths.webp" alt="Evolutionary paths of AGNs toward z=0 on the black hole mass-stellar mass plane" loading="lazy" width="1381" height="1367"></a>
+              <figcaption>How AGNs are expected to move on the black-hole mass&ndash;stellar mass plane as they evolve to <i>z</i>&nbsp;=&nbsp;0.</figcaption>
+            </figure>
+          </div>
+          <p class="hl-summary">
+            We measured stellar masses, colors and structures for the host galaxies of ~11,500 broad-line AGNs at <i>z</i>&nbsp;&le;&nbsp;0.35,
+            a sample nearly 40 times larger than any before it. Early- and late-type AGN hosts follow a similar relation between black-hole
+            mass and stellar mass, and where an AGN sits on this plane is tied to its star formation and black-hole growth.
+            This points to distinct evolutionary paths: galaxies above the relation mainly grow in stellar mass, those on it move
+            along it, and those below it mainly grow their black holes. These paths suggest that radiative-mode feedback cannot quench the growth of AGNs below the relation,
+            while kinetic-mode feedback hardly suppresses long-term star formation in those above it.
+          </p>
+          <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023NatAs...7.1376Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2308.08603">arXiv</a> <a href="https://doi.org/10.1038/s41550-023-02051-4">Journal</a></div>
+        </article>
+      </div>
+
+      <h3 class="pub-subhead">First-author Papers</h3>
       <div class="pub-list">
+<!-- BEGIN AUTO PUBS -->
+        <div class="pub-item">
+          <div class="pub-year">2026</div>
+          <div>
+            <p class="pub-title">NEXUS: Discovery of a Luminous Young Transient at <i>z</i> = 5</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, Y. Shen, L. Hu, et al.</p>
+            <p class="pub-venue"><a class="venue-badge" href="#hl-at2026abck">Highlight</a> arXiv:2609.38373</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260938373Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2609.38373">arXiv</a></div>
+          </div>
+        </div>
+
         <div class="pub-item">
           <div class="pub-year">2026</div>
           <div>
             <p class="pub-title">NEXUS: Transient Searches and First Results from Year One Observations</p>
             <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. Hu, J. D. R. Pierel, et al.</p>
-            <p class="pub-venue"><span class="venue-badge">Featured</span> arXiv:2609.06985</p>
-            <div class="pub-links">
-              <a href="https://arxiv.org/abs/2609.06985">arXiv</a>
-            </div>
+            <p class="pub-venue"><a class="venue-badge" href="#hl-nexus-transients">Highlight</a> arXiv:2609.06985</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260906985Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2609.06985">arXiv</a></div>
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-year">2026</div>
           <div>
-            <p class="pub-title">Cold Gas Infall onto a Brightest Group Galaxy via a Gas-Rich Minor Merger</p>
+            <p class="pub-title">Cold Gas Infall onto a Brightest Group Galaxy via a Gas-rich Minor Merger</p>
             <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, J. Shangguan, Y. Bian, et al.</p>
-            <p class="pub-venue">ApJ, 999, 16</p>
+            <p class="pub-venue">ApJL, 999, L19</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2026ApJ...999L..19Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2512.13932">arXiv</a> <a href="https://doi.org/10.3847/2041-8213/ae45a9">Journal</a></div>
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-year">2026</div>
           <div>
-            <p class="pub-title">NEXUS: A Spectroscopic Census of Broad-line AGNs and Little Red Dots at 3 &lt; z &lt; 6</p>
-            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, J. Li, Y. Shen, et al.</p>
-            <p class="pub-venue"><span class="venue-badge">Featured</span> ApJ, 999, 31</p>
+            <p class="pub-title">NEXUS: Quick Release Notes</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, Y. Shen, J. Li, et al.</p>
+            <p class="pub-venue">arXiv:2603.04586</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260304586Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2603.04586">arXiv</a></div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-year">2024</div>
+          <div class="pub-year">2026</div>
+          <div>
+            <p class="pub-title">NEXUS: A Spectroscopic Census of Broad-line AGNs and Little Red Dots at 3 ≲ <i>z</i> ≲ 6</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, J. Li, Y. Shen, et al.</p>
+            <p class="pub-venue"><a class="venue-badge" href="#hl-nexus-lrds">Highlight</a> ApJ, 999, 31</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2026ApJ...999...31Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2505.20393">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/ae3612">Journal</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2026</div>
           <div>
             <p class="pub-title">NEXUS Early Data Release: NIRCam Imaging and WFSS Spectroscopy from the First (Partial) Wide Epoch</p>
             <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, F. Wang, F. Sun, et al.</p>
             <p class="pub-venue">ApJS, 282, 54</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2026ApJS..282...54Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2411.06372">arXiv</a> <a href="https://doi.org/10.3847/1538-4365/ae2d05">Journal</a></div>
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-year">2024</div>
           <div>
-            <p class="pub-title">Characterization of JWST NIRCam PSFs and Implications for AGN+Host Image Decomposition</p>
+            <p class="pub-title">High-quality Extragalactic Legacy-field Monitoring (HELM) with DECam: Project Overview and First Data Release</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, Q. Yang, Y. Shen, et al.</p>
+            <p class="pub-venue">ApJS, 274, 42</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024ApJS..274...42Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2402.06052">arXiv</a> <a href="https://doi.org/10.3847/1538-4365/ad7d01">Journal</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2024</div>
+          <div>
+            <p class="pub-title">Active Galactic Nuclei and Host Galaxies in COSMOS-Web. I. NIRCam Images, Point-spread-function Models and Initial Results on X-Ray-selected Broad-line AGNs at 0.35 ≲ <i>z</i> ≲ 3.5</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, J. Li, Y. Shen</p>
+            <p class="pub-venue"><a class="venue-badge" href="#hl-cosmosweb">Highlight</a> ApJ, 962, 93</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...962...93Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2309.03266">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/ad1517">Journal</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2024</div>
+          <div>
+            <p class="pub-title">Characterization of JWST NIRCam PSFs and Implications for AGN+host Image Decomposition</p>
             <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, Y. Shen</p>
             <p class="pub-venue">ApJ, 962, 139</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...962..139Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2304.13776">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/ad1183">Journal</a></div>
           </div>
         </div>
 
@@ -172,7 +352,8 @@
           <div>
             <p class="pub-title">Evolutionary paths of active galactic nuclei and their host galaxies</p>
             <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. C. Ho</p>
-            <p class="pub-venue"><span class="venue-badge">Featured</span> Nature Astronomy, 7, 1376</p>
+            <p class="pub-venue"><a class="venue-badge" href="#hl-natas">Highlight</a> Nature Astronomy, 7, 1376</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023NatAs...7.1376Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2308.08603">arXiv</a> <a href="https://doi.org/10.1038/s41550-023-02051-4">Journal</a></div>
           </div>
         </div>
 
@@ -182,8 +363,60 @@
             <p class="pub-title">The Star-forming Main Sequence of the Host Galaxies of Low-redshift Quasars</p>
             <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. C. Ho</p>
             <p class="pub-venue">ApJ, 934, 130</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...934..130Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2208.01301">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/ac7aaf">Journal</a></div>
           </div>
         </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2021</div>
+          <div>
+            <p class="pub-title">Black Hole Accretion Correlates with Star Formation Rate and Star Formation Efficiency in Nearby Luminous Type 1 Active Galaxies</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. C. Ho, J. Shangguan</p>
+            <p class="pub-venue">ApJ, 906, 38</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...906...38Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2007.11285">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/abc94d">Journal</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2020</div>
+          <div>
+            <p class="pub-title">The Interplay between Star Formation and Black Hole Accretion in Nearby Active Galaxies</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. C. Ho</p>
+            <p class="pub-venue">ApJ, 896, 108</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...896..108Z/abstract">ADS</a> <a href="https://arxiv.org/abs/2007.11283">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/ab8f2e">Journal</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2019</div>
+          <div>
+            <p class="pub-title">Recalibration of [O II] λ3727 as a Star Formation Rate Estimator for Active and Inactive Galaxies</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. C. Ho</p>
+            <p class="pub-venue">ApJ, 882, 89</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...882...89Z/abstract">ADS</a> <a href="https://arxiv.org/abs/1907.07933">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/ab340d">Journal</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2019</div>
+          <div>
+            <p class="pub-title">A New Method to Measure Star Formation Rates in Active Galaxies Using Mid-infrared Neon Emission Lines</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. C. Ho, J. Shangguan</p>
+            <p class="pub-venue">ApJ, 873, 103</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...873..103Z/abstract">ADS</a> <a href="https://arxiv.org/abs/1902.03849">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/ab0650">Journal</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year">2018</div>
+          <div>
+            <p class="pub-title">The Infrared Emission and Opening Angle of the Torus in Quasars</p>
+            <p class="pub-authors"><span class="me">M.-Y. Zhuang</span>, L. C. Ho, J. Shangguan</p>
+            <p class="pub-venue">ApJ, 862, 118</p>
+            <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2018ApJ...862..118Z/abstract">ADS</a> <a href="https://arxiv.org/abs/1806.03783">arXiv</a> <a href="https://doi.org/10.3847/1538-4357/aacc2d">Journal</a></div>
+          </div>
+        </div>
+<!-- END AUTO PUBS -->
       </div>
 
       <p class="pub-more">Full, up-to-date publication list on <a href="https://ui.adsabs.harvard.edu/user/libraries/7eLaCipeRIuYIkoZK0YHaA">ADS</a>.</p>
