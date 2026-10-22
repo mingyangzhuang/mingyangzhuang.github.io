@@ -22,7 +22,7 @@ FL = ("bibcode,title,author,first_author_norm,pub,volume,page,year,pubdate,doi,"
 def ads(token):
     s = requests.Session()
     s.headers["Authorization"] = f"Bearer {token}"
-    r = s.get("https://api.adsabs.harvard.edu/v1/search/query",
+    r = s.get(os.environ.get("SCIX_API_URL", "https://scixplorer.org/v1/search/query"),
               params={"q": f"docs(library/{LIB_ID})", "fl": FL, "rows": 2000,
                       "sort": "date desc"}, timeout=60)
     r.raise_for_status()

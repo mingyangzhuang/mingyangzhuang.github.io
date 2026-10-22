@@ -49,7 +49,7 @@ TEX = {r"\lesssim": "≲", r"\gtrsim": "≳", r"\sim": "~", r"\approx": "≈", r
 
 def fetch_ads(token):
     import requests
-    r = requests.get("https://api.adsabs.harvard.edu/v1/search/query",
+    r = requests.get(os.environ.get("SCIX_API_URL", "https://scixplorer.org/v1/search/query"),
                      headers={"Authorization": f"Bearer {token}"},
                      params={"q": f"docs(library/{LIB_ID})", "fl": FL, "rows": 2000,
                              "sort": "date desc"}, timeout=60)
