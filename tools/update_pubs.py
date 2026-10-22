@@ -160,7 +160,8 @@ def main():
             sys.exit("Set ADS_TOKEN or pass --cache FILE")
         docs = fetch_ads(token)
     papers = [d for d in docs if is_first_author_paper(d)]
-    papers.sort(key=lambda d: d.get("pubdate", ""), reverse=True)
+    # Tie-break same-month papers by arXiv id (then bibcode) so the order is stable run to run.
+    papers.sort(key=lambda d: (d.get("pubdate", ""), arxiv_id(d) or "", d["bibcode"]), reverse=True)
     if not papers:
         sys.exit("No first-author papers found; refusing to wipe the list.")
 
