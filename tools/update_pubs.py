@@ -121,7 +121,7 @@ def highlight_anchor(d):
 def item_html(d):
     a = arxiv_id(d)
     journal_doi = next((x for x in d.get("doi", []) if not x.startswith("10.48550")), None)
-    links = [f'<a href="https://ui.adsabs.harvard.edu/abs/{d["bibcode"]}/abstract">ADS</a>']
+    links = [f'<a href="https://scixplorer.org/abs/{d["bibcode"]}/abstract">SciX</a>']
     if a:
         links.append(f'<a href="https://arxiv.org/abs/{a}">arXiv</a>')
     if journal_doi:
