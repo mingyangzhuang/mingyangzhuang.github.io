@@ -1,0 +1,30 @@
+name: Update publication list
+
+on:
+  schedule:
+    - cron: "17 9 * * 1"     # every Monday 09:17 UTC
+  workflow_dispatch:          # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Regenerate first-author list from ADS
+        env:
+          ADS_TOKEN: ${{ secrets.ADS_TOKEN }}
+        run: python3 tools/update_pubs.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet; then echo "No changes"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Auto-update publication list from ADS"
+          git push
