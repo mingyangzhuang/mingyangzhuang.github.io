@@ -206,13 +206,4 @@
     p.parentNode.insertBefore(b, p.nextSibling);
   });
 
-  // 5) Latest news strip under the hero: clone the first 3 items of the full news list.
-  (function () {
-    var box = document.getElementById('latest');
-    var src = document.querySelector('#projects-news .news-list');
-    if (!box || !src) return;
-    var ul = box.querySelector('.news-list');
-    Array.prototype.slice.call(src.children, 0, 3).forEach(function (li) { ul.appendChild(li.cloneNode(true)); });
-    if (ul.children.length) box.hidden = false;
-  })();
 })();
