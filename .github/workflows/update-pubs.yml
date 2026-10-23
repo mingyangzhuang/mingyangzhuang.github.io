@@ -2,7 +2,7 @@ name: Update publication list
 
 on:
   schedule:
-    - cron: "17 9 * * 1"     # every Monday 09:17 UTC
+    - cron: "17 9 1 */2 *"    # 09:17 UTC on the 1st of every second month
   workflow_dispatch:          # allow manual runs from the Actions tab
 
 permissions:
@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests
-      - name: Regenerate first-author list from ADS
+      - name: Update paper counts from SciX
         env:
           ADS_TOKEN: ${{ secrets.ADS_TOKEN }}
         run: python3 tools/update_pubs.py
@@ -26,5 +26,5 @@ jobs:
           if git diff --quiet; then echo "No changes"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Auto-update publication list from ADS"
+          git commit -am "Auto-update publication counts from SciX"
           git push
