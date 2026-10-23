@@ -922,3 +922,5 @@ footer .wrap {
 
 .hero-text { flex: 1 1 0; min-width: 0; }
 @media (max-width: 560px) { .hero-text { flex-basis: 100%; } .hero-text h1 { font-size: 2rem; } }
+
+#publications .section-intro { max-width: none; text-wrap: wrap; }
