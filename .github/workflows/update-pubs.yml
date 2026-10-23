@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   update:
@@ -21,6 +22,14 @@ jobs:
         env:
           ADS_TOKEN: ${{ secrets.ADS_TOKEN }}
         run: python3 tools/update_pubs.py
+      - name: Open an Issue for new first-author papers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f new_papers.md ]; then
+            gh issue create --title "New first-author paper: add a Research Highlight?" --body-file new_papers.md
+            rm new_papers.md
+          fi
       - name: Commit if changed
         run: |
           if git diff --quiet; then echo "No changes"; exit 0; fi
