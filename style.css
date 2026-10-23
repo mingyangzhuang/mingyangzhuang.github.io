@@ -326,7 +326,8 @@ header.hero {
   font-size: 1.1rem;
   line-height: 1.65;
   color: var(--hero-text-soft);
-  max-width: 62ch;
+  max-width: 66ch;
+  text-wrap: pretty;
 }
 
 .hero-links {
