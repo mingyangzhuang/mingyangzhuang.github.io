@@ -151,4 +151,68 @@
       window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
     });
   }
+
+  /* ---------- Compact layout helpers ---------- */
+
+  // 1+2) First-author list: show the newest few papers that are not already a highlight card; expand on demand.
+  (function () {
+    var list = document.querySelector('#publications .pub-list');
+    if (!list) return;
+    var items = Array.prototype.slice.call(list.querySelectorAll('.pub-item'));
+    var VISIBLE = 6, shown = 0;
+    items.forEach(function (it) {
+      var isHighlight = !!it.querySelector('a.venue-badge');
+      if (isHighlight || shown >= VISIBLE) it.classList.add('is-collapsed');
+      else shown++;
+    });
+    if (!list.querySelector('.is-collapsed')) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'pub-toggle';
+    var open = false;
+    function label() {
+      btn.textContent = open ? 'Show fewer' : 'Show all ' + items.length + ' first-author papers';
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    btn.addEventListener('click', function () {
+      open = !open;
+      if (open) items.forEach(function (it) { it.classList.remove('is-collapsed'); });
+      else {
+        var n = 0;
+        items.forEach(function (it) {
+          var isHighlight = !!it.querySelector('a.venue-badge');
+          if (isHighlight || n >= VISIBLE) it.classList.add('is-collapsed'); else n++;
+        });
+      }
+      label();
+    });
+    label();
+    list.parentNode.insertBefore(btn, list.nextSibling);
+  })();
+
+  // 4) Highlight cards: clamp long summaries with a Read more toggle.
+  document.querySelectorAll('.hl-summary').forEach(function (p) {
+    p.classList.add('is-clamped');
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'hl-more';
+    b.textContent = 'Read more';
+    b.setAttribute('aria-expanded', 'false');
+    b.addEventListener('click', function () {
+      var o = p.classList.toggle('is-open');
+      b.textContent = o ? 'Show less' : 'Read more';
+      b.setAttribute('aria-expanded', o ? 'true' : 'false');
+    });
+    p.parentNode.insertBefore(b, p.nextSibling);
+  });
+
+  // 5) Latest news strip under the hero: clone the first 3 items of the full news list.
+  (function () {
+    var box = document.getElementById('latest');
+    var src = document.querySelector('#projects-news .news-list');
+    if (!box || !src) return;
+    var ul = box.querySelector('.news-list');
+    Array.prototype.slice.call(src.children, 0, 3).forEach(function (li) { ul.appendChild(li.cloneNode(true)); });
+    if (ul.children.length) box.hidden = false;
+  })();
 })();
